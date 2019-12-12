@@ -41,5 +41,29 @@ Muito bem, como pode ser observados temos uma série de parâmentros que compõe
 - **ProductID** - Tipo do produto;
 - **PIDKEY** - Chave de ativação do produto;
 - **Language ID** - Linguagem de instalação;
-- **RemoveMSI** - Remove ou não o produto caso esteja previamente instalado
+- **RemoveMSI** - Remove ou não o produto caso esteja previamente instalado.
 
+Existem outros produtos da Microsoft que podem ser informados no parâmetro **ProdutctID** e podem ser localizados [IDs de produto compatíveis com a ferramenta de implantação do Office](https://docs.microsoft.com/pt-br/office365/troubleshoot/administration/product-ids-supported-office-deployment-click-to-run).
+
+## Instalando o Microsoft Office
+Depois de configurado o arquivo *Configuration.xml*, com o Prompt de Comando elevado no modo administrador deve-se executar o comando abaixo na pasta onde foi salvo o arquivo *setup.exe*. Veja abaixo a sintaxe:
+
+```
+setup.exe /download configuration.xml
+```
+
+Pode parecer que nada está acontecendo, mas o processo de download acontece em background e pode ser observado através do Task Manager do SO. Os arquivos serão baixados na pasta compartilhada que foi informada no parâmetro **SourcePath**.
+Agora que o download foi finalizado, podemos iniciar o processo de instalação utilizando o Prompt de Comando elevado no modo administrator. Observe a sintaxe abaixo:
+
+```
+setup.exe /configure configuration.xml
+```
+
+Ok, agora é necessário finalizar a instalção do Microsoft Office e qualquer outro produto informado no arquivo *Configuration.xml*.
+
+## Fontes e Links Complementares
+Todas as informações contidas neste documento, foram obtidas através da Microsfot nos seguintes links:
+
+- [Implantar o Office 2019 (para profissionais de TI)](https://docs.microsoft.com/pt-br/DeployOffice/office2019/deploy)
+- [Office Deployment Tool  ](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
+- [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](https://docs.microsoft.com/en-us/office365/troubleshoot/administration/product-ids-supported-office-deployment-click-to-run)
