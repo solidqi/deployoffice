@@ -1,5 +1,5 @@
 <Configuration>
-  <Add SourcePath="\\DESKTOP-U9QRBMC\Office2K19" OfficeClientEdition="64" Channel="PerpetualVL2019">
+  <Add SourcePath="\\<servername>\<sharedfolder>" OfficeClientEdition="64" Channel="PerpetualVL2019">
       <Product ID="ProPlus2019Volume"  PIDKEY="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" >
          <Language ID="pt-br" />
       </Product>
